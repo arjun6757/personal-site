@@ -98,6 +98,31 @@ header nav {
   transition: transform 0.3s ease;
 }
 
+.page-for-sign-up {
+  background-color: #222221;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.page-for-sign-up #sign-up {
+  font-size: 1.2rem;
+  width: 100px;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #ababab;
+  background-color: #222221;
+  color: #777;
+  align-self: center;
+}
+
+#sign-up:hover {
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #111;
+  cursor: pointer;
+}
+
 #close-btn.visible {
   transform: translateX(0);
 }
@@ -179,7 +204,7 @@ header nav {
   border: 1px solid #777;
   border-radius: 8px;
   width: 250px;
-  height: 180px;
+  min-height: auto;
 }
 
 .pr h3 {
@@ -334,12 +359,7 @@ footer .socials {
 
   .projects .pr {
     width: 100%;
-    min-height: 120px;
-    padding: 0;
-    margin: 0;
     margin-bottom: 20px;
-    /* border-radius: 3px; */
-    padding: 10px;
   }
 
   footer {
