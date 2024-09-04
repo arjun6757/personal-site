@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start fully transparent */
+  }
+  to {
+    opacity: 1; /* End fully opaque */
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #323230;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px; /*default value*/
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border-bottom: 2px solid #a8a8a8;
+  border-radius: 3px;
+  margin: 0px 20px;
+  z-index: 2;
+}
+
+#view-btn {
+  opacity: 1;
+  border: none;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  /* border: 1px solid #ddd; */
+  color: #a8a8a8;
+  cursor: pointer;
+}
+
+#view-btn:hover {
+  color: #fff;
+}
+
+.sidebar {
+  width: 300px;
+  position: fixed;
+  background-color: #222221;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 20px;
+  transform: translateX(-100%); 
+  /* move the sidebar out of view */
+  transition: transform 0.5s ease;
+}
+
+.sidebar.active {
+  transform: translateX(0); /* move the sidebar to the view */
+}
+
+.sidebar ul li {
+  list-style-type: none;
+}
+
+.sidebar ul li a{
+  background-color: #222221;
+  display: block;
+  color: #777;
+  text-align: center;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.sidebar ul li a:hover {
+  color: #fff;
+}
+
+.sidebar #close-btn{
+  color: #777;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: -60px;
+  top: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transform: translateX(-200%);
+  transition: transform 0.3s ease;
+}
+
+#close-btn.visible {
+  transform: translateX(0);
+}
+
+#close-btn:hover {
+  color: #fff;
+}
+
+#close-btn svg {
+  width: 100%;
+  height: 100%;
+}
+
+.About h1 {
+  color: #a8a8a8;
+}
+
+.About p {
+  color: #777;
+}
+
+.me {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 20px;
+  border-bottom: 2px solid #a8a8a8;
+  margin: 20px;
+}
+
+.me .profile {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.me .short-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  line-height: 25px;
+}
+
+.me .short-info p {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.content {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.content a {
+  text-decoration: none;
+  border: 1px solid #777;
+  border-radius: 8px;
+  padding: 10px;
+  color: #ababab;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.pr {
+  text-align: center;
+  padding: 10px;
+  color: #a8a8a8;
+  border: 1px solid #777;
+  border-radius: 8px;
+  width: 250px;
+  height: 180px;
+}
+
+.pr h3 {
+  color: #a8a8a8;
+}
+
+.pr p {
+  color: #777;
+}
+
+.pr p {
+  padding-top: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #a8a8a8;
+  padding-bottom: 50px;
+  margin: 20px;
+}
+
+#last {
+  grid-column: 2 / 3; /* Move to the center column */
+  grid-row: 3; /* Move to the second row, adjust if needed */
+}
+
+footer .heading {
+  color: #a8a8a8;
+  margin-bottom: 20px;
+}
+
+footer li {
+  color: #777;
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 3fr;
+  justify-content: center;
+  justify-items: center;
+  padding: 20px;
+}
+
+footer h3 {
+  color: #a8a8a8;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+footer .contact-info p {
+  padding-top: 10px;
+  color: #777;
+}
+
+footer .contact-info h3 {
+  border-bottom: 2px solid #a8a8a8;
+}
+
+.links {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.links img {
+  width: 30px;
+  height: 30px;
+}
+
+footer .copyright-section {
+  grid-column: span 4;
+  /* border: 1px solid black; */
+  text-align: center;
+  color: #ababab;
+}
+
+.content a:hover {
+  border: 1px solid #555;
+  color: #fff;
+  background-color: #555;
+}
+
+.content a:hover::after {
+  content: ""; /* Adds a star emoji or other content after the link */
+  color: #fff;
+  /* margin-left: 5px; Space between the link text and the added content */
+}
+
+.container .projects .pr:hover {
+  /* box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5); */
+  /* This shadow is offset 5 pixels right and down, with a 10-pixel blur radius, a 5-pixel spread radius, and a semi-transparent black color. */
+
+  box-shadow: 0px 0px 8px 1px #888;
+}
+
+footer .socials h3{
+  border-bottom: 2px solid #a8a8a8;
+}
+
+footer .socials {
+  grid-column: 4 / 5; 
+  grid-row: 2;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.socials .links a{
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 880px) {
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+  }
+
+  .projects .pr:nth-child(6) {
+    grid-column: span 2;
+    justify-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container,
+  .projects,
+  .projects .pr {
+    box-sizing: border-box;
+  }
+
+
+  .me {
+    display: block;
+    text-align: center;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .projects {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .projects .pr {
+    width: 100%;
+    min-height: 120px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    /* border-radius: 3px; */
+    padding: 10px;
+  }
+
+  footer {
+    display: block;
+  }
+
+  .topics {
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 40px;
+  }
+
+  .contact-info {
+    margin-bottom: 40px;
+  }
+
+  .copyright-section {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .About .short-info h1 {
+    line-height: 40px;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .sidebar {
+    width: 150px;
+  }
+}
