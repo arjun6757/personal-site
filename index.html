@@ -46,20 +46,30 @@
 
       <ul>
         <li>
-          <a href="#">Home</a>
-          <a href="#">Updates</a>
-          <a href="#">Projects</a>
-          <a href="#">Skills</a>
-          <a href="#">Services</a>
-          <a href="#">Resume/CV</a>
-          <a href="#">Blogs</a>
-          <a href="#">Website</a>
-          <a href="#">Testimonials</a>
-          <a href="#">Contact</a>
-          <a href="#">About Me</a>
-          <a href="#">Support</a>
-          <a href="#">Community</a>
+          <div class="signup-div">
+            <button id="signup-btn">Sign Up</button>
+          </div>
         </li>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Skills</a></li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li><a href="#">Resume/CV</a></li>
+        <li>
+          <a href="#">Resume/CV</a>
+        </li>
+        <li>
+          <a href="#">Blogs</a>
+        </li>
+
+        <li><a href="#">Website</a></li>
+        <li><a href="#">Testimonials</a></li>
+
+        <li><a href="#">Contact</a></li>
       </ul>
     </div>
 
@@ -82,15 +92,15 @@
 
     <div class="content">
       <div class="blogs">
-        <a href="#">🍔 Blogs</a>
+        <a href="#">Blogs</a>
       </div>
 
       <div class="project">
-        <a href="#">🍜 Projects</a>
+        <a href="#">Projects</a>
       </div>
 
       <div class="tools">
-        <a href="#">🍳 Tools</a>
+        <a href="#">Tools</a>
       </div>
     </div>
 
@@ -234,6 +244,127 @@
         <p>&copy; 2024 Arjun Banerjee</p>
       </div>
     </footer>
+
+    <div class="signup-container">
+      <form class="formsignup" action="submit-signup">
+        <div class="instruction-container">
+          <div class="wrapper-btn">
+            <span>Sign Up</span>
+            <button id="close-btn-form">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="currentColor"
+                class="bi bi-x-lg"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+                />
+              </svg>
+            </button>
+          </div>
+          <p>Please fill in this form to create an account.</p>
+        </div>
+
+        <div class="input-div-form">
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="First Name"
+            required
+          />
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            placeholder="Last Name"
+            required
+          />
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <input
+            type="password"
+            id="veri-passwd"
+            name="veri-passwd"
+            placeholder="Confirm Password"
+            required
+          />
+        </div>
+        <div class="terms">
+          <input type="checkbox" id="terms" name="terms" required />
+          <label for="terms"
+            >I accept the <a href="#">Terms of Use</a> &
+            <a href="#">Privacy Policy</a></label
+          >
+        </div>
+        <button id="form-submit-btn">Submit</button>
+        <p class="if-got-acc-txt">
+          Already have an account? click
+          <a id="switch-login" href="#">here</a> to sign in.
+        </p>
+      </form>
+
+      <form class="formsignin" action="submit-signin">
+        <div class="instruction-container">
+          <div class="wrapper-btn">
+            <span>Sign In</span>
+            <button id="close-lgin-form">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="currentColor"
+                class="bi bi-x-lg"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+                />
+              </svg>
+            </button>
+          </div>
+          <p>Please enter login details below.</p>
+        </div>
+
+        <div class="input-div-form">
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Email or Username"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+
+        <button id="login-btn">Log In</button>
+        <p class="if-not-got-acc-txt">
+          Don't have an account? click
+          <a id="switch-signup" href="#">here</a> to create a account.
+        </p>
+      </form>
+    </div>
 
     <script src="./script.js"></script>
   </body>
