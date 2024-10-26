@@ -28,11 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
         closeSidebar.classList.remove("visible");
     }
 
-    closeformButton.onclick = function () {
+    closeformButton.onclick = function (e) {
+        e.preventDefault();
         signupFormContainer.style.transform = "translateY(-100%)";     
     }
 
-    closeLoginFormButton.onclick = function() {
+    closeLoginFormButton.onclick = function(e) {
+        e.preventDefault();
         signupFormContainer.style.transform = "translateY(-100%)";
     }
 
